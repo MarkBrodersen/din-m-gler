@@ -1,4 +1,3 @@
-import FeatherIcons from "feather-icons-react";
 import EmailAdresse from "../componets/sub-componets/EmailAdresse";
 import PhoneNumber from "../componets/sub-componets/PhoneNumber";
 import logo from "../assets/images/logo.png";

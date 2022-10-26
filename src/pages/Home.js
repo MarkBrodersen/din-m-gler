@@ -9,7 +9,7 @@ const Home = () => {
           this in majority have suffered alteration in some
         </p>
       </article>
-      <section className="grid grid-cols-2 w-2/3 m-auto">
+      <section className="grid grid-cols-2 gap-5 w-2/3 m-auto">
         <HomePageHouses />
       </section>
     </section>
