@@ -44,143 +44,134 @@ module.exports = {
         },
       },
       fontSize: {
-        sm: "3rem",
-        button: {
-          md: [
-            "18px",
-            {
-              lineHeight: "30px",
-              fontWeight: "500",
-            },
-          ],
-          sm: [
-            "1.1rem",
-            {
-              lineHeight: "1.5rem",
-            },
-          ],
-        },
-        mainHeading: {
-          100: [
-            "60px",
-            {
-              lineHeight: "80px",
-              fontWeight: "bold",
-            },
-          ],
-          200: [
-            "50px",
-            {
-              lineHeight: "66px",
-              fontWeight: "bold",
-            },
-          ],
-          300: [
-            "24px",
-            {
-              lineHeight: "50px",
-              fontWeight: "bold",
-            },
-          ],
-          400: [
-            "46px",
-            {
-              lineHeight: "54px",
-              fontWeight: "bold",
-            },
-          ],
-          500: [
-            "200px",
-            {
-              lineHeight: "200px",
-              fontWeight: "bold",
-            },
-          ],
-        },
-        heading: {
-          100: [
-            "38px",
-            {
-              lineHeight: "54px",
-              fontWeight: "bold",
-            },
-          ],
-          200: [
-            "30px",
-            {
-              lineHeight: "42px",
-              fontWeight: "500",
-            },
-          ],
-          300: [
-            "24px",
-            {
-              lineHeight: "32px",
-              fontWeight: "500",
-            },
-          ],
-          400: [
-            "20px",
-            {
-              lineHeight: "30px",
-              fontWeight: "500",
-            },
-          ],
-          500: [
-            "16px",
-            {
-              lineHeight: "26px",
-              fontWeight: "500",
-            },
-          ],
-        },
-        paragraph: {
-          100: [
-            "18px",
-            {
-              lineHeight: "30px",
-            },
-          ],
-          200: [
-            "16px",
-            {
-              lineHeight: "28px",
-            },
-          ],
-          300: [
-            "14px",
-            {
-              lineHeight: "24px",
-            },
-          ],
-          400: [
-            "12px",
-            {
-              lineHeight: "24px",
-            },
-          ],
-          500: [
-            "24px",
-            {
-              lineHeight: "32px",
-            },
-          ],
-          600: [
-            "20px",
-            {
-              lineHeight: "30px",
-              fontWeight: "500",
-            },
-          ],
-          italic: [
-            "20px",
-            {
-              lineHeight: "32px",
-              fontWeight: "500",
-              fontStyle: "italic",
-            },
-          ],
-        },
+        btn100: [
+          "18px",
+          {
+            lineHeight: "30px",
+            fontWeight: "500",
+          },
+        ],
+        btn200: [
+          "1.1rem",
+          {
+            lineHeight: "1.5rem",
+          },
+        ],
+        mainHeading100: [
+          "60px",
+          {
+            lineHeight: "80px",
+            fontWeight: "bold",
+          },
+        ],
+        mainHeading200: [
+          "50px",
+          {
+            lineHeight: "66px",
+            fontWeight: "bold",
+          },
+        ],
+        mainHeading300: [
+          "24px",
+          {
+            lineHeight: "50px",
+            fontWeight: "bold",
+          },
+        ],
+        mainHeading400: [
+          "46px",
+          {
+            lineHeight: "54px",
+            fontWeight: "bold",
+          },
+        ],
+        mainHeading500: [
+          "200px",
+          {
+            lineHeight: "200px",
+            fontWeight: "bold",
+          },
+        ],
+        heading100: [
+          "38px",
+          {
+            lineHeight: "54px",
+            fontWeight: "bold",
+          },
+        ],
+        heading200: [
+          "30px",
+          {
+            lineHeight: "42px",
+            fontWeight: "500",
+          },
+        ],
+        heading300: [
+          "24px",
+          {
+            lineHeight: "32px",
+            fontWeight: "500",
+          },
+        ],
+        heading400: [
+          "20px",
+          {
+            lineHeight: "30px",
+            fontWeight: "500",
+          },
+        ],
+        heading500: [
+          "16px",
+          {
+            lineHeight: "26px",
+            fontWeight: "500",
+          },
+        ],
+        para100: [
+          "18px",
+          {
+            lineHeight: "30px",
+          },
+        ],
+        para200: [
+          "16px",
+          {
+            lineHeight: "28px",
+          },
+        ],
+        para300: [
+          "14px",
+          {
+            lineHeight: "24px",
+          },
+        ],
+        para400: [
+          "12px",
+          {
+            lineHeight: "24px",
+          },
+        ],
+        para500: [
+          "24px",
+          {
+            lineHeight: "32px",
+          },
+        ],
+        para600: [
+          "20px",
+          {
+            lineHeight: "30px",
+            fontWeight: "500",
+          },
+        ],
+        italic: [
+          "20px",
+          {
+            lineHeight: "32px",
+            fontWeight: "500",
+            fontStyle: "italic",
+          },
+        ],
       },
     },
   },
