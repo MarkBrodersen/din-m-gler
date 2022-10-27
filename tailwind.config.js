@@ -52,9 +52,9 @@ module.exports = {
           },
         ],
         btn200: [
-          "1.1rem",
+          "14px",
           {
-            lineHeight: "1.5rem",
+            lineHeight: "24px",
           },
         ],
         mainHeading100: [

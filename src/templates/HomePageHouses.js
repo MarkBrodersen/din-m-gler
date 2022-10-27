@@ -14,7 +14,11 @@ const HomePageHouses = () => {
         data.map((house) => {
           return (
             <div key={house.id} className="ml-4 mr-4 shadow-md">
-              <img src="http://placekitten.com/520/225" alt={house.type} />
+              <img
+                className="max-h-36 w-screen "
+                src={house.images[0].url}
+                alt={house.type}
+              />
               <article className="p-5">
                 <h3 className="text-heading400 text-headingColor-200">
                   {house.adress1}

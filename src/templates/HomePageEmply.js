@@ -2,7 +2,7 @@ import Loading from "../componets/animation/Loading";
 import useFetch from "../hooks/useFetch";
 import FeatherIcons from "feather-icons-react";
 const HomePageEmply = () => {
-  const { data } = useFetch("https://dinmaegler.herokuapp.com/agents/");
+  const { data } = useFetch("https://dinmaegler.herokuapp.com/agents?_limit=3");
   return (
     <>
       {data === null ? (

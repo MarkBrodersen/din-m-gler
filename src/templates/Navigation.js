@@ -6,7 +6,7 @@ import Links from "../componets/Links";
 const Navigation = () => {
   return (
     <header>
-      <div className="w-screen h-12 bg-primary-100">
+      <div className="w-full h-12 bg-primary-100">
         <div className="flex justify-between items-center pt-3 w-2/3 m-auto">
           <div className="flex justify-center w-auto">
             <EmailAdresse />
