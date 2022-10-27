@@ -12,11 +12,10 @@ const HomePageHouses = () => {
       ) : (
         data &&
         data.map((house) => {
-          const image = house.images[0];
           return (
-            <div key={house.id} className="ml-4 mr-4 ">
-              <img src="http://placekitten.com/520/225" alt="" />
-              <article className="">
+            <div key={house.id} className="ml-4 mr-4 shadow-md">
+              <img src="http://placekitten.com/520/225" alt={house.type} />
+              <article className="p-5">
                 <h3 className="text-heading400 text-headingColor-200">
                   {house.adress1}
                 </h3>
