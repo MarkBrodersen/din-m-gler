@@ -3,7 +3,7 @@ const Hero = () => {
   return (
     <div className="w-full relative">
       <img
-        className="w-screen"
+        className="w-screen brightness-50"
         src={heroImage}
         alt="Billede af et hus med tekst foran"
       />

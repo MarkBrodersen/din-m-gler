@@ -24,14 +24,14 @@ const HomePageEmply = () => {
                 <p className="text-para100 text-paragraphColor200">
                   {agent.title}
                 </p>
-                <div>
-                  <button className="text-white ">
+                <div className="mt-2">
+                  <button className="text-white mr-2">
                     <FeatherIcons
                       className="fill-headingColor-200 stroke-1"
                       icon="mail"
                     />
                   </button>
-                  <button className="text-headingColor-200">
+                  <button className="text-headingColor-200 ml-2">
                     <FeatherIcons
                       className="fill-headingColor-200 stroke-none"
                       icon="linkedin"

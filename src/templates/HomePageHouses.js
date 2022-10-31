@@ -15,7 +15,7 @@ const HomePageHouses = () => {
           return (
             <div key={house.id} className="ml-4 mr-4 shadow-md">
               <img
-                className="max-h-36 w-screen "
+                className="max-h-48 w-screen "
                 src={house.images[0].url}
                 alt={house.type}
               />
@@ -62,8 +62,7 @@ const HomePageHouses = () => {
                       </span>
                     )}
                     <div className="font-paragraph-200 text-paragraphColor-100 flex w-44 justify-between">
-                      <p>{house.rooms} værelser</p>
-                      <p>{house.livingspace}m²</p>
+                      <p>{house.rooms} værelser</p>•<p>{house.livingspace}m²</p>
                     </div>
                   </div>
                   <p className="text-para600 text-paragraphColor-100">

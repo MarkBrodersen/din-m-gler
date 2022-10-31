@@ -16,7 +16,7 @@ const Navigation = () => {
         </div>
       </div>
       <div className="w-screen h-16 text-paragraph-100">
-        <div className="w-2/3 m-auto flex items-center">
+        <div className="w-2/3 h-16 m-auto flex items-center">
           <img src={logo} alt="Din mæglers logo" />
           <div className="w-3/4 m-auto flex justify-end">
             <Links link="#" linkTo="Boliger til salg" />

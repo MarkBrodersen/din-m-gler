@@ -9,6 +9,10 @@ import FlavorArticles from "../componets/FlavorArticles";
 import customer from "../assets/icons/customer.png";
 import propertyVal from "../assets/icons/propertyVal.png";
 import Hero from "../templates/Hero";
+import NewsLetterBanner from "../componets/NewsLetterBanner";
+import SectionLinks from "../componets/SectionLinks";
+import AppInstallSection from "../componets/AppInstallSection";
+import Info from "../componets/Info";
 
 const Home = () => {
   return (
@@ -81,18 +85,27 @@ til salg i alle vores 74 butikker, som er fordelt rundt om i Danmark."
         <div className=" grid grid-cols-2 gap-5 w-2/3 m-auto">
           <HomePageHouses />
         </div>
+        <SectionLinks link="/boliger" text="Se alle boliger" />
       </section>
-      <section>
-        <article className="w-2/3 m-auto text-center">
+      <NewsLetterBanner />
+      <section className="pb-16">
+        <article className="w-2/3 m-auto mb-12 text-center">
           <Heading heading="Mød vores engagerede medarbejdere" />
           <HeadingPara
             para="Din Mægler er garant for altid veluddannet assistance i dit
             boligsalg. Kontakt en af vores medarbejdere."
           />
         </article>
-        <div className="bg- grid grid-cols-3 gap-5 w-2/3 m-auto">
+        <div className="grid grid-cols-3 gap-5 w-2/3 m-auto">
           <HomePageEmply />
         </div>
+        <SectionLinks link="/mægler" text="Se alle mæglere" />
+      </section>
+      <section className="bg-primary-100 w-full pt-24 ">
+        <AppInstallSection />
+      </section>
+      <section className="w-2/3 m-auto pt-16">
+        <Info />
       </section>
     </main>
   );
