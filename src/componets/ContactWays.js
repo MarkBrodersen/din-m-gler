@@ -2,7 +2,7 @@ import ContactWay from "./sub-componets/ContactWay";
 
 const ContactWays = () => {
   return (
-    <article>
+    <div>
       <ContactWay spanText="Ring til os" pText="+45 7070 4000" icon="phone" />
       <ContactWay
         spanText="Send en mail"
@@ -14,10 +14,7 @@ const ContactWays = () => {
         pText="Stændertorvet 78, 4000 Roskilde"
         icon="map-pin"
       />
-      <p className="text-paragraphColor-100 text-para100">
-        Din Mægler Roskilde, er din <br /> boligibutik i lokalområdet.
-      </p>
-    </article>
+    </div>
   );
 };
 

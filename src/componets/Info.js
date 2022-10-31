@@ -3,7 +3,7 @@ import ContactWays from "./ContactWays";
 import QuickLinks from "./QuickLinks";
 const Info = () => {
   return (
-    <>
+    <div className="w-2/3 m-auto">
       <img src={logo} alt="din mæglers logo" />
       <p className="w-10/12 text-para100 text-paragraphColor-100">
         There are many variations of passages of Lorem Ipsum available, but the
@@ -14,7 +14,7 @@ const Info = () => {
         <ContactWays />
         <QuickLinks />
       </div>
-    </>
+    </div>
   );
 };
 
