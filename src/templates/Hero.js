@@ -1,4 +1,5 @@
 import heroImage from "../assets/images/heroImage.jpg";
+import HeadingUnderLine from "../componets/sub-componets/HeadingUnderLine";
 const Hero = () => {
   return (
     <div className="w-full relative">
@@ -12,9 +13,7 @@ const Hero = () => {
           Søg efter din drømmebolig
         </h1>
         <article className="bg-white p-6 py-8 w-full m-auto">
-          <h3 className="textUnderLine  text-headingColor-200 text-heading400">
-            Søg blandt 158 boliger til salg i 74 butikker
-          </h3>
+          <HeadingUnderLine text="Søg blandt 158 boliger til salg i 74 butikker" />
           <p className="text-para200 text-paragraphColor-100">
             Hvad skal din næste bolig indeholde
           </p>

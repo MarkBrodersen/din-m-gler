@@ -2,6 +2,7 @@ import EmailAdresse from "../componets/sub-componets/EmailAdresse";
 import PhoneNumber from "../componets/sub-componets/PhoneNumber";
 import logo from "../assets/images/logo.png";
 import Links from "../componets/Links";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -17,7 +18,9 @@ const Navigation = () => {
       </div>
       <div className="w-screen h-16 text-paragraph-100">
         <div className="w-2/3 h-16 m-auto flex items-center">
-          <img src={logo} alt="Din mæglers logo" />
+          <Link to="/">
+            <img src={logo} alt="Din mæglers logo" />
+          </Link>
           <div className="w-3/4 m-auto flex justify-end">
             <Links link="#" linkTo="Boliger til salg" />
             <Links link="#" linkTo="Mæglere" />
