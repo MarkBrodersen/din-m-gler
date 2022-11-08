@@ -1,13 +1,12 @@
 import Loading from "../componets/animation/Loading";
 import useFetch from "../hooks/useFetch";
 const HomePageHouses = () => {
-  const { data } = useFetch(
+  const { data, loading } = useFetch(
     "https://dinmaegler.herokuapp.com/homes?_limit=4&type_eq=Villa"
   );
   return (
     <>
-      <Loading />
-      {data === null ? (
+      {loading === true ? (
         <Loading />
       ) : (
         data &&

@@ -1,10 +1,19 @@
 import FeatherIcons from "feather-icons-react";
-const EmailAdresse = () => {
+const EmailAdresse = ({ email, color }) => {
   return (
-    <div className="flex mr-2 ml-2 text-white">
-      <FeatherIcons icon="send" />
-      <p>4000@dinmaegler.com</p>
-    </div>
+    <>
+      {color === "white" ? (
+        <div className="flex mr-2 ml-2 text-white">
+          <FeatherIcons icon="send" />
+          <p>{email}</p>
+        </div>
+      ) : (
+        <div className="flex mr-2 ml-2 text-paragraphColor-100">
+          <FeatherIcons icon="send" />
+          <p>{email}</p>
+        </div>
+      )}
+    </>
   );
 };
 

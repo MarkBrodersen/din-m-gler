@@ -12,7 +12,6 @@ import Hero from "../templates/Hero";
 import NewsLetterBanner from "../componets/NewsLetterBanner";
 import SectionLinks from "../componets/SectionLinks";
 import AppInstallSection from "../componets/AppInstallSection";
-import Info from "../componets/Info";
 
 const Home = () => {
   return (
@@ -99,33 +98,11 @@ til salg i alle vores 74 butikker, som er fordelt rundt om i Danmark."
         <div className="grid grid-cols-3 gap-5 w-2/3 m-auto">
           <HomePageEmply />
         </div>
-        <SectionLinks link="/mægler" text="Se alle mæglere" />
+        <SectionLinks link="/agents" text="Se alle mæglere" />
       </section>
       <section className="bg-primary-100 w-full pt-24 ">
         <AppInstallSection />
       </section>
-      <section>
-        <div className="bg-background-100 pt-16">
-          <Info />
-        </div>
-        <div className="w-2/3 m-auto grid grid-cols-2">
-          <p className="text-paragraphColor-100 text-para100">
-            Din Mægler Roskilde, er din <br /> boligibutik i lokalområdet.
-          </p>
-          <article className="mb-14">
-            <span className="text-para400 text-paragraphColor-200">
-              Mellem af
-            </span>
-            <h2 className="text-heading100 text-paragraphColor-200">DMS</h2>
-            <p className="text-para200 text-paragraphColor-200">
-              Dansk Mægler Sammenslutning
-            </p>
-          </article>
-        </div>
-      </section>
-      <div className="flex justify-center items-center bg-primary-100 h-16 w-full">
-        <p className="text-white text-para100">©Din mægler 2020</p>
-      </div>
     </main>
   );
 };

@@ -1,15 +1,48 @@
 import { motion } from "framer-motion";
 const Loading = () => {
+  const container = {
+    startEnd: {
+      scale: 1,
+    },
+    bigger: {
+      scale: 1,
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        delayChildren: 0.2,
+      },
+    },
+  };
+  const dots = {
+    startEnd: {
+      scale: 1,
+      opacity: 0.5,
+    },
+    bigger: {
+      scale: 1.2,
+      opacity: 1,
+    },
+  };
   return (
     <motion.div
-      className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      initial={{ scale: 1 }}
-      animate={{ scale: 1.2 }}
-      exit={{ scale: 1 }}
+      variants={container}
+      initial="startEnd"
+      animate="bigger"
+      exit="startEnd"
+      className="relative -translate-x-1/2 -translate-y-1/2"
     >
-      <span className="w-32 h-32 rounded-full bg-stone-600"></span>
-      <span className="w-32 h-32 rounded-full bg-stone-600"></span>
-      <span className="w-32 h-32 rounded-full bg-stone-600"></span>
+      <motion.span
+        variants={dots}
+        className="w-8 h-8 absolute top-5 left-0 rounded-full bg-stone-600"
+      ></motion.span>
+      <motion.span
+        variants={dots}
+        className="w-8 h-8 absolute top-5 left-10 rounded-full bg-stone-600"
+      ></motion.span>
+      <motion.span
+        variants={dots}
+        className="w-8 h-8 absolute top-5 left-20 rounded-full bg-stone-600"
+      ></motion.span>
     </motion.div>
   );
 };
