@@ -10,8 +10,8 @@ const Navigation = () => {
       <div className="w-full h-12 bg-primary-100">
         <div className="flex justify-between items-center pt-3 w-2/3 m-auto">
           <div className="flex justify-center w-auto">
-            <EmailAdresse />
-            <PhoneNumber />
+            <EmailAdresse email="4000@dinmaegler.com" color="white" />
+            <PhoneNumber number="+45 7070 4000" color="white" />
           </div>
           <div className="text-white">Log Ind</div>
         </div>

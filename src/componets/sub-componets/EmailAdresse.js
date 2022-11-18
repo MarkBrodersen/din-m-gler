@@ -1,5 +1,5 @@
 import FeatherIcons from "feather-icons-react";
-const EmailAdresse = ({ email, color }) => {
+const EmailAdresse = ({ email, color, insideColor }) => {
   return (
     <>
       {color === "white" ? (
