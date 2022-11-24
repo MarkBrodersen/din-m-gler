@@ -1,17 +1,60 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
-import FeatherIcons from "feather-icons-react";
 import { motion } from "framer-motion";
 import MotionIconsBtn from "../componets/sub-componets/MotionIconsBtn";
+import AgentImage from "../componets/sub-componets/AgentImage";
+import PhoneNumber from "../componets/sub-componets/PhoneNumber";
+import EmailAdresse from "../componets/sub-componets/EmailAdresse";
+import { useState } from "react";
 
 const BoligerDetails = () => {
+  const [pic, setPic] = useState(false);
+  const [layout, setLayout] = useState(false);
   const id = useParams().id;
   const { data, loading } = useFetch(
     `https://dinmaegler.herokuapp.com/homes/${id}`
   );
   console.log(data);
+  const picHandler = () => {
+    if (layout) {
+      setLayout(false);
+      setPic(true);
+    } else {
+      setPic(false);
+      setLayout(true);
+    }
+    if (pic === true) {
+      setPic(false);
+    } else {
+      setPic(true);
+    }
+  };
+  const layoutHandler = () => {
+    if (pic) {
+      setLayout(true);
+      setPic(false);
+    } else {
+      setPic(true);
+      setLayout(false);
+    }
+    if (layout === true) {
+      setLayout(false);
+    } else {
+      setLayout(true);
+    }
+  };
   return (
     <main>
+      {data && pic === true ? (
+        <div className="fixed  top-0 w-screen h-screen bg-black">
+          <img className="" src={data.images[0].url} alt={data.type} />
+        </div>
+      ) : null}
+      {data && layout === true ? (
+        <div className="fixed  top-0 w-screen h-screen bg-black">
+          <img className="" src={data.floorplan.url} alt={data.type} />
+        </div>
+      ) : null}
       {data && (
         <div>
           <img src={data.images[0].url} alt={data.type} />
@@ -25,12 +68,29 @@ const BoligerDetails = () => {
                   {data.postalcode} {data.city}
                 </h2>
               </div>
-              <div className="w-40 flex justify-between items-center ">
-                <MotionIconsBtn icon="image" />
-                <MotionIconsBtn icon="layers" />
-                <MotionIconsBtn icon="map-pin" />
-                <MotionIconsBtn icon="heart" />
-              </div>
+              {pic === true ? (
+                <div className="w-50 text-white flex justify-between items-center fixed left-1/2 translate-y-10">
+                  <MotionIconsBtn
+                    white="true"
+                    icon="image"
+                    onclick={picHandler}
+                  />
+                  <MotionIconsBtn
+                    white="true"
+                    icon="layers"
+                    onclick={layoutHandler}
+                  />
+                  <MotionIconsBtn white="true" icon="map-pin" />
+                  <MotionIconsBtn white="true" icon="heart" />
+                </div>
+              ) : (
+                <div className=" flex justify-between items-center ">
+                  <MotionIconsBtn icon="image" onclick={picHandler} />
+                  <MotionIconsBtn icon="layers" onclick={layoutHandler} />
+                  <MotionIconsBtn icon="map-pin" />
+                  <MotionIconsBtn icon="heart" />
+                </div>
+              )}
               <h2 className="text-heading200 text-primary-100">
                 Kr. {data.price}
               </h2>
@@ -81,12 +141,47 @@ const BoligerDetails = () => {
                 </ul>
               </div>
             </div>
-            <div>
-              <article>
-                <h2>Beskrivelse</h2>
+            <div className="flex">
+              <article className="w-1/2 mr-4">
+                <h2 className="mb-3 text-heading300 text-headingColor-200">
+                  Beskrivelse
+                </h2>
                 <p>{data.description}</p>
               </article>
-              <div></div>
+              <article className="w-1/2 ml-4">
+                <h2 className="mb-3 text-heading300 text-headingColor-200">
+                  Ansvarlig mægler
+                </h2>
+                <div className="flex p-4 border border-shape-100">
+                  <AgentImage
+                    image={data.agent.image.url}
+                    alt={data.agent.name}
+                  />
+                  <div className="ml-3">
+                    <div>
+                      <h2 className="text-heading300 text-headingColor-200">
+                        {data.agent.name}
+                      </h2>
+                      <p className="text-para100 text-paragraphColor-200">
+                        {data.agent.title}
+                      </p>
+                    </div>
+                    <div className="h-1 w-12 bg-primary-100 my-5"></div>
+                    <div>
+                      <PhoneNumber
+                        color="black"
+                        insideColor="black"
+                        number={data.agent.phone}
+                      />
+                      <EmailAdresse
+                        color="black"
+                        insideColor="black"
+                        email={data.agent.email}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
