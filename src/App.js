@@ -4,6 +4,7 @@ import Boliger from "./pages/Boliger";
 import Agents from "./pages/Agents";
 import Layout from "./templates/Layout";
 import AgentsDetails from "./pages/AgentsDetails";
+import BoligerDetails from "./pages/BoligerDetails";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/boliger" element={<Boliger />} />
-          <Route path="/boliger:id" element={<Boliger />} />
+          <Route path="/boligerDetails/:id" element={<BoligerDetails />} />
           <Route path="/agents" element={<Agents />} />
           <Route path="/agentsDetails/:id" element={<AgentsDetails />} />
         </Route>

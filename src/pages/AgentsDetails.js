@@ -20,7 +20,7 @@ const AgentsDetails = () => {
           <div className="w-2/3 p-5 border border-shape-100">
             <div className="flex">
               <AgentImage image={data.image.url} alt={data.name} />
-              <div className="ml-4 w-full ">
+              <div className="ml-4 w-1/2 ">
                 <div className="flex justify-between">
                   <div>
                     <h2 className="text-heading300 text-headingColor-200">
@@ -131,7 +131,15 @@ const AgentsDetails = () => {
                 />
               </div>
             </div>
-            <div></div>
+            <article className="flex flex-col justify-center items-center mt-4 text-center p-4 py-24 bg-primary-100">
+              <h3 className="text-heading200 text-white mb-6">
+                Find The Best Property For Rent Or Buy
+              </h3>
+              <p className="border-t-2 border-shape-100 text-white text-para100 w-24 pt-2">
+                Call Us Now
+              </p>
+              <p className="text-heading200 text-white">+00 123 456 789</p>
+            </article>
           </div>
         </section>
       ) : (

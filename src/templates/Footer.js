@@ -8,7 +8,7 @@ const Footer = () => {
         <Info />
       </div>
       <div className="w-2/3 m-auto grid grid-cols-2">
-        <p className="text-paragraphColor-100 text-para100">
+        <p className="text-paragraphColor-100 text-para100 pl-4 shadow-lg h-16 w-5/6 rounded-b-sm">
           Din Mægler Roskilde, er din <br /> boligibutik i lokalområdet.
         </p>
         <article className="mb-14">

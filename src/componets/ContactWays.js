@@ -2,7 +2,7 @@ import ContactWay from "./sub-componets/ContactWay";
 
 const ContactWays = () => {
   return (
-    <div>
+    <div className="bg-white p-3 rounded-t-sm w-5/6">
       <ContactWay spanText="Ring til os" pText="+45 7070 4000" icon="phone" />
       <ContactWay
         spanText="Send en mail"
