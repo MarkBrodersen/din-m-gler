@@ -20,7 +20,7 @@ const Hero = () => {
           <form className="flex" action="">
             <input
               placeholder="Søg på fx. glaskeramisk komfur, bryggers, kælder eller lignende"
-              className="w-full mr-2 border border-shape-100"
+              className="w-full pl-3 mr-2 border border-shape-100"
               type="text"
             />
             <button className="bg-primary-100 text-white px-12 py-3">

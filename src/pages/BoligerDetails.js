@@ -47,12 +47,20 @@ const BoligerDetails = () => {
     <main>
       {data && pic === true ? (
         <div className="fixed  top-0 w-screen h-screen bg-black">
-          <img className="" src={data.images[0].url} alt={data.type} />
+          <img
+            className="h-96 w-1/3 m-auto translate-y-12"
+            src={data.images[0].url}
+            alt={data.type}
+          />
         </div>
       ) : null}
       {data && layout === true ? (
         <div className="fixed  top-0 w-screen h-screen bg-black">
-          <img className="" src={data.floorplan.url} alt={data.type} />
+          <img
+            className="h-96 w-1/3 m-auto translate-y-12"
+            src={data.floorplan.url}
+            alt={data.type}
+          />
         </div>
       ) : null}
       {data && (
@@ -69,7 +77,7 @@ const BoligerDetails = () => {
                 </h2>
               </div>
               {pic === true ? (
-                <div className="w-50 text-white flex justify-between items-center fixed left-1/2 translate-y-10">
+                <div className="w-50 text-white flex justify-between items-center fixed bottom-0 left-1/2 translate-y-10">
                   <MotionIconsBtn
                     white="true"
                     icon="image"

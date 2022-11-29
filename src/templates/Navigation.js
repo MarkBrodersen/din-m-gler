@@ -22,8 +22,8 @@ const Navigation = () => {
             <img src={logo} alt="Din mæglers logo" />
           </Link>
           <div className="w-3/4 m-auto flex justify-end">
-            <Links link="#" linkTo="Boliger til salg" />
-            <Links link="#" linkTo="Mæglere" />
+            <Links link="/boliger" linkTo="Boliger til salg" />
+            <Links link="/agents" linkTo="Mæglere" />
             <Links link="#" linkTo="Mine favoritter" />
             <Links link="#" linkTo="Kontakt Os" />
           </div>
