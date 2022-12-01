@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { motion } from "framer-motion";
 import MotionIconsBtn from "../componets/sub-componets/MotionIconsBtn";
@@ -43,21 +43,23 @@ const BoligerDetails = () => {
       setLayout(true);
     }
   };
+  let brutto = Math.floor(data.price - data.payment - data.netto - data.cost);
+  console.log(brutto);
   return (
     <main>
       {data && pic === true ? (
-        <div className="fixed  top-0 w-screen h-screen bg-black">
+        <div className="fixed z-40  top-0 w-screen h-screen bg-bga-100">
           <img
-            className="h-96 w-1/3 m-auto translate-y-12"
+            className="w-4/5  h-96 w-1/3 m-auto translate-y-12"
             src={data.images[0].url}
             alt={data.type}
           />
         </div>
       ) : null}
       {data && layout === true ? (
-        <div className="fixed  top-0 w-screen h-screen bg-black">
+        <div className="fixed  z-40 top-0 w-screen h-screen bg-bga-100">
           <img
-            className="h-96 w-1/3 m-auto translate-y-12"
+            className="w-4/5  h-96 w-1/3 m-auto translate-y-12"
             src={data.floorplan.url}
             alt={data.type}
           />
@@ -77,7 +79,7 @@ const BoligerDetails = () => {
                 </h2>
               </div>
               {pic === true ? (
-                <div className="w-50 text-white flex justify-between items-center fixed bottom-0 left-1/2 translate-y-10">
+                <div className="w-50 z-50 text-white flex justify-between items-center fixed bottom-96 left-1/2 translate-y-10">
                   <MotionIconsBtn
                     white="true"
                     icon="image"
@@ -143,9 +145,9 @@ const BoligerDetails = () => {
                 </ul>
                 <ul className=" text-para200">
                   <li>Kr. {data.payment}</li>
-                  <li>Kr. {}</li>
+                  <li>Kr. {brutto}</li>
                   <li>Kr. {data.netto}</li>
-                  <li>Kr. {}</li>
+                  <li>Kr. {data.cost}</li>
                 </ul>
               </div>
             </div>
@@ -160,7 +162,10 @@ const BoligerDetails = () => {
                 <h2 className="mb-3 text-heading300 text-headingColor-200">
                   Ansvarlig mægler
                 </h2>
-                <div className="flex p-4 border border-shape-100">
+                <Link
+                  to={`/agentsDetails/${data.agent.id}`}
+                  className="flex p-4 border border-shape-100"
+                >
                   <AgentImage
                     image={data.agent.image.url}
                     alt={data.agent.name}
@@ -188,7 +193,7 @@ const BoligerDetails = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </Link>
               </article>
             </div>
           </div>
