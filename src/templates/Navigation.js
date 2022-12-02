@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <header>
+    <header className="pb-3">
       <div className="w-full h-12 bg-primary-100">
         <div className="flex justify-between items-center pt-3 w-2/3 m-auto">
           <div className="flex justify-center w-auto">
@@ -17,7 +17,7 @@ const Navigation = () => {
         </div>
       </div>
       <div className="w-screen h-16 text-paragraph-100">
-        <div className="w-2/3 h-16 m-auto flex items-center">
+        <div className="w-2/3 h-16 pt-3 m-auto flex items-center">
           <Link to="/">
             <img src={logo} alt="Din mæglers logo" />
           </Link>

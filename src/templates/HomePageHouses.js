@@ -36,7 +36,7 @@ const HomePageHouses = () => {
                       {house.type}:
                     </span>
                     <p className="text-para200 text-paragraphColor-100">
-                      Kr.{house.cost}
+                      Kr.{house.price}
                     </p>
                   </div>
                   <div className=" border-t border-t-shape-100 flex justify-between">
@@ -68,7 +68,7 @@ const HomePageHouses = () => {
                       </div>
                     </div>
                     <p className="text-para600 text-paragraphColor-100">
-                      Kr.{house.cost}
+                      Kr.{house.price}
                     </p>
                   </div>
                 </article>

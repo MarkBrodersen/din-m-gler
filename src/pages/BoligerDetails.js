@@ -43,8 +43,8 @@ const BoligerDetails = () => {
       setLayout(true);
     }
   };
-  let brutto = Math.floor(data.price - data.payment - data.netto - data.cost);
-  console.log(brutto);
+  // let brutto = Math.floor(data.price - data.payment - data.netto - data.cost);
+  // console.log(brutto);
   return (
     <main>
       {data && pic === true ? (
@@ -67,7 +67,7 @@ const BoligerDetails = () => {
       ) : null}
       {data && (
         <div>
-          <img src={data.images[0].url} alt={data.type} />
+          <img className="w-screen" src={data.images[0].url} alt={data.type} />
           <div className="w-2/3 m-auto">
             <div className="flex justify-between">
               <div>
@@ -145,7 +145,7 @@ const BoligerDetails = () => {
                 </ul>
                 <ul className=" text-para200">
                   <li>Kr. {data.payment}</li>
-                  <li>Kr. {brutto}</li>
+                  <li>Kr. {}</li>
                   <li>Kr. {data.netto}</li>
                   <li>Kr. {data.cost}</li>
                 </ul>
@@ -162,10 +162,7 @@ const BoligerDetails = () => {
                 <h2 className="mb-3 text-heading300 text-headingColor-200">
                   Ansvarlig mægler
                 </h2>
-                <Link
-                  to={`/agentsDetails/${data.agent.id}`}
-                  className="flex p-4 border border-shape-100"
-                >
+                <div className="flex p-4 border border-shape-100">
                   <AgentImage
                     image={data.agent.image.url}
                     alt={data.agent.name}
@@ -193,7 +190,7 @@ const BoligerDetails = () => {
                       />
                     </div>
                   </div>
-                </Link>
+                </div>
               </article>
             </div>
           </div>
